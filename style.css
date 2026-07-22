@@ -40,8 +40,8 @@ body.dark-mode{
   --surface-2:#232B36;
 }
 
-  --font-display:'Fraunces', serif;
-  --font-body:'Inter', sans-serif;
+  --font-display:'Montserrat', sans-serif;
+  --font-body:'Jost', sans-serif;
   --font-mono:'IBM Plex Mono', monospace;
 
   --radius:14px;
@@ -58,9 +58,16 @@ body{
   background-position: -4px -4px;
   color:var(--ink);
   font-family:var(--font-body);
+  font-size:16px;
+  letter-spacing:0.01em;
   min-height:100vh;
   -webkit-font-smoothing:antialiased;
   transition:background-color 0.2s ease, color 0.2s ease;
+}
+
+.brand{
+  font-size:1.55rem;
+  letter-spacing:-0.02em;
 }
 
 button, input, textarea{ font-family:inherit; }
