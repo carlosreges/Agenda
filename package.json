@@ -1,0 +1,16 @@
+{
+  "name": "agenda-apoyo-escolar",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Agenda escolar con backend en Node.js y base de datos para guardar estudiantes y clases.",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.7.0",
+    "cors": "^2.8.0",
+    "express": "^4.21.0"
+  }
+}

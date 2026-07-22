@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>Agenda de Apoyo Escolar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+<div id="app">
+
+  <header class="top">
+    <div class="top-bar">
+      <div class="brand-wrap">
+        <img src="/LogoProfe.png" alt="Logo del profesor" class="brand-logo">
+        <div>
+          <p class="brand">Agenda de <span class="accent">Apoyo</span></p>
+          <p class="brand-sub">Tus clases, ordenadas por bloque.</p>
+        </div>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">🌙</button>
+    </div>
+
+    <div class="date-nav">
+      <button class="nav-btn" id="prevDayBtn" aria-label="Día anterior">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="date-label-btn" id="dateLabelBtn">
+        <span class="cap" id="dateCap">Hoy</span>
+        <span id="dateMain">—</span>
+      </button>
+      <button class="nav-btn" id="nextDayBtn" aria-label="Día siguiente">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+    <input type="date" id="hiddenDateInput">
+  </header>
+
+  <div class="week-wrap">
+    <div class="spiral-row" id="spiralRow"></div>
+    <div class="tabs" id="tabsRow"></div>
+    <div class="week-nav">
+      <button id="prevWeekBtn">← Semana anterior</button>
+      <button id="todayBtn">Ir a hoy</button>
+      <button id="nextWeekBtn">Semana siguiente →</button>
+    </div>
+  </div>
+
+  <div id="bannerSlot"></div>
+
+  <div class="blocks" id="blocksSlot"></div>
+
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <h2 id="modalTitle">Agregar alumno</h2>
+    <p class="sub" id="modalSub">Bloque de clase</p>
+
+    <div class="field">
+      <label for="fName">Nombre</label>
+      <input id="fName" type="text" list="knownNames" placeholder="Nombre del alumno" autocomplete="off">
+      <datalist id="knownNames"></datalist>
+    </div>
+    <div class="field">
+      <label for="fSubject">Materia / tema</label>
+      <input id="fSubject" type="text" placeholder="Ej: Matemática, Lengua...">
+    </div>
+    <div class="field">
+      <label for="fNotes">Notas</label>
+      <textarea id="fNotes" placeholder="Opcional: qué van a repasar, materiales, etc."></textarea>
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn secondary" id="cancelBtn">Cancelar</button>
+      <button class="btn danger" id="deleteBtn" style="display:none;">Quitar</button>
+      <button class="btn primary" id="saveBtn">Guardar</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="/script.js"></script>
+</body>
+</html>
