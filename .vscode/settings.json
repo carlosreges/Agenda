@@ -1,0 +1,8 @@
+{
+  "chat.tools.terminal.autoApprove": {
+    "/^d: ; cd d:\\\\WebPage\\\\Agenda ; npm view @tursodatabase/serverless version --json ; echo 'no serverless package'$/": {
+      "approve": true,
+      "matchCommandLine": true
+    }
+  }
+}

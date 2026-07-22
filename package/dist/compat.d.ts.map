@@ -1,0 +1,1 @@
+{"version":3,"file":"compat.d.ts","sourceRoot":"","sources":["../compat.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAkB,WAAW,EAAE,YAAY,EAAoB,MAAM,gCAAgC,CAAA;AAoB5H,cAAM,QAAS,SAAQ,cAAc;gBACrB,IAAI,EAAE,MAAM,EAAE,IAAI,GAAE,YAAiB;CAUpD;AAED,OAAO,EAAE,QAAQ,EAAE,WAAW,EAAE,CAAA"}
