@@ -5,7 +5,8 @@ const Database = require('better-sqlite3');
 
 const app = express();
 const port = process.env.PORT || 3000;
-const dbPath = process.env.DB_PATH || path.join(__dirname, 'data', 'agenda.db');
+const isVercel = Boolean(process.env.VERCEL);
+const dbPath = process.env.DB_PATH || (isVercel ? '/tmp/agenda.db' : path.join(__dirname, 'data', 'agenda.db'));
 
 app.use(cors());
 app.use(express.json());
